@@ -43,9 +43,9 @@ $(function(){
 
     /*改变图片内容的函数*/
     function change_pop_content(i){
-		$("#v-content").fadeOut(500);
-		$("#v-content").fadeIn(500);
-		setTimeout(function () { $("#v-content").attr("src",photo_info[i].url); }, 500);
+		$("#v-content").fadeOut(250);
+		$("#v-content").fadeIn(250);
+		setTimeout(function () { $("#v-content").attr("src",photo_info[i].url); }, 250);
         $("#v-content").attr("name",i);
     } 
     
