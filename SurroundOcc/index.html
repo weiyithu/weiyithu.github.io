@@ -124,57 +124,32 @@
             </div>
           </br>
           <p>
-            <font size="4">        Occupancy prediction:</font>
+            <font size="4">&emsp;&emsp;&emsp;Occupancy prediction:</font>
           </p>
           <div class="columns is-centered">
-            <video  style="height:175px;width:800px;" src="videos/demo1.mp4" muted loop autoplay></video>
+            <video  style="height:832px;width:1472px;" src="videos/demo1.mp4" muted loop autoplay></video>
           </div>
           <p>
             <font size="4">        Generated dense occupancy labels:</font>
           </p>
           <div class="columns is-centered">
-            <video  style="height:175px;width:800px;" src="videos/demo2.mp4" muted loop autoplay></video>
+            <video  style="height:1008px;width:1472px;" src="videos/demo2.mp4" muted loop autoplay></video>
           </div>
           <p>
             <font size="4">        Comparison with TPVFormer:</font>
           </p>
           <div class="columns is-centered">
-            <video  style="height:175px;width:800px;" src="videos/demo3.mp4" muted loop autoplay></video>
+            <video  style="height:1024px;width:1472px;" src="videos/demo3.mp4" muted loop autoplay></video>
           </div>
           <p>
             <font size="4">        In the wild demo (trained on nuScenes, tested on Beijing street):</font>
           </p>
           <div class="columns is-centered">
-            <video  style="height:175px;width:800px;" src="videos/demo4.mp4" muted loop autoplay></video>
+            <video  style="height:832px;width:1472px;" src="videos/demo4.mp4" muted loop autoplay></video>
           </div>
       </div>
     </section>
 
-    <section class="section" id="In-the-wild">
-      <div class="container">
-          <div class="column has-text-centered">
-            <h2 class="title is-3">In-the-wild Showcases</h2>
-            </div>
-          </br>
-
-            <div class="columns is-centered">
-              <video  style="height:175px;width:800px;" src="videos/demo1.mp4" muted loop autoplay></video>
-            </div>
-
-            </br>
-
-            <div class="columns is-centered">
-              <video  style="height:175px;width:800px;" src="videos/demo2.mp4" muted loop autoplay></video>
-            </div>
-          </br>
-          <div class="columns is-centered">
-          <p>
-            We captured data with a hand-held phone at home. 
-          </p>
-        
-          </div>
-      </div>
-    </section>
     
     <section class="section" id="Abstract">
       <div class="container">
@@ -183,12 +158,13 @@
             </div>
           </br>
             <div class="columns is-centered">
-              <img width="1000" src="imgs/pipeline.gif"  alt="paper">
+              <img width="1000" src="imgs/teaser.jpg"  alt="paper">
             </div>
           <div class="columns is-centered">
           <div class="column is-two-thirds has-text-justified">
           <p>
-            In this work, we present a new multi-view depth estimation method that utilizes both conventional SfM reconstruction and learning-based priors over the recently proposed neural radiance fields (NeRF). Unlike existing neural network based optimization method that relies on estimated correspondences, our method directly optimizes over implicit volumes, eliminating the challenging step of matching pixels in indoor scenes. The key to our approach is to utilize the learning-based priors to guide the optimization process of NeRF. Our system firstly adapts a monocular depth network over the target scene by finetuning on its sparse SfM reconstruction. Then, we show that the shape-radiance ambiguity of NeRF still exists in indoor environments and propose to address the issue by employing the adapted depth priors to monitor the sampling process of volume rendering. Finally, a per-pixel confidence map acquired by error computation on the rendered image can be used to further improve the depth quality. Experiments show that our proposed framework significantly outperforms state-of-the-art methods on indoor scenes, with surprising findings presented on the effectiveness of correspondence-based optimization and NeRF-based optimization over the adapted depth priors. In addition, we show that the guided optimization scheme does not sacrifice the original synthesis capability of neural radiance fields, improving the rendering quality on both seen and novel views.
+          Towards a more comprehensive perception of a 3D scene, in this paper, we propose a SurroundOcc method to predict the 3D occupancy with multi-camera images. We first extract multi-scale features for each image and adopt spatial 2D-3D attention to lift them to the 3D volume space.
+Then we apply 3D convolutions to progressively upsample the volume features and impose supervision on multiple levels. To obtain dense occupancy prediction, we design a pipeline to generate dense occupancy ground truth without expansive occupancy annotations. Specifically, we fuse multi-frame LiDAR scans of dynamic objects and static scenes separately. Then we adopt Poisson Reconstruction to fill the holes and voxelize the mesh to get dense occupancy labels. Extensive experiments on nuScenes and SemanticKITTI datasets demonstrate the superiority of our method. 
           </p>
           </div>
           </div>
