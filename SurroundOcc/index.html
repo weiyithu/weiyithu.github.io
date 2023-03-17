@@ -134,18 +134,21 @@
           <p>
             <font size="4">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Generated dense occupancy labels:</font>
           </p>
+          </br>
           <div class="columns is-centered">
             <video  style="height:617px;width:900px;" src="videos/demo2.mp4" muted loop autoplay></video>
           </div>
           <p>
             <font size="4">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Comparison with TPVFormer:</font>
           </p>
+          </br>
           <div class="columns is-centered">
             <video  style="height:627px;width:900px;" src="videos/demo3.mp4" muted loop autoplay></video>
           </div>
           <p>
             <font size="4">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;In the wild demo (trained on nuScenes, tested on Beijing street):</font>
           </p>
+          </br>
           <div class="columns is-centered">
             <video  style="height:509px;width:900px;" src="videos/demo4.mp4" muted loop autoplay></video>
           </div>
@@ -160,7 +163,7 @@
             </div>
           </br>
             <div class="columns is-centered">
-              <img width="800" src="imgs/teaser.jpg"  alt="paper">
+              <img width="600" src="imgs/teaser.jpg"  alt="paper">
             </div>
           <div class="columns is-centered">
           <div class="column is-two-thirds has-text-justified">
@@ -169,6 +172,30 @@
 Then we apply 3D convolutions to progressively upsample the volume features and impose supervision on multiple levels. To obtain dense occupancy prediction, we design a pipeline to generate dense occupancy ground truth without expansive occupancy annotations. Specifically, we fuse multi-frame LiDAR scans of dynamic objects and static scenes separately. Then we adopt Poisson Reconstruction to fill the holes and voxelize the mesh to get dense occupancy labels. Extensive experiments on nuScenes and SemanticKITTI datasets demonstrate the superiority of our method. 
           </p>
           </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="section" id="Approach">
+      <div class="container">
+          <div class="column has-text-centered">
+            <h2 class="title is-3">Approach</h2>
+            </div>
+          </br>
+           <p>
+            <font size="4">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Method pipeline:</font>
+           </p>
+           </br>
+            <div class="columns is-centered">
+              <img width="800" src="imgs/page_pipeline.jpg"  alt="paper">
+            </div>
+          </br>
+          <p>
+            <font size="4">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Occupancy ground truth generation pipeline:</font>
+           </p>
+           </br>
+          <div class="columns is-centered">
+            <img width="800" src="imgs/page_gt_pipeline.jpg"  alt="paper">
           </div>
       </div>
     </section>
